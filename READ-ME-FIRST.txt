@@ -1,0 +1,29 @@
+MERCATO STORE - how to run (Windows)
+
+You need two things installed once: Node.js (nodejs.org, LTS) and MySQL (you already have it).
+
+FIRST TIME
+1. Double-click START.bat
+2. Notepad opens twice. Fill these and save:
+   Backend  (first Notepad):  DB_PASS = your MySQL password,  STRIPE_SECRET_KEY = your sk_test_... key
+   Frontend (second Notepad): VITE_STRIPE_PUBLISHABLE_KEY = your pk_test_... key
+3. Wait while it installs. Two black windows open and the website opens in Chrome.
+   Do not close the black windows.
+4. On the website, click Log in, then Create an account, and register.
+5. Double-click MAKE-ADMIN.bat and type the same email. Then log out and log in on the website.
+6. Double-click ADD-PRODUCTS.bat to fill the store with 660 products.
+
+EVERY NEXT TIME
+Just double-click START.bat. Close the two black windows to stop the store.
+
+FOLDERS
+backend   = the server (Node + Express + MySQL)
+frontend  = the website (React)
+Do not move files out of these two folders.
+
+TEST PAYMENT CARD
+4242 4242 4242 4242, any future date, any CVC.
+
+PUTTING IT ONLINE (later)
+Upload this whole folder to ONE GitHub repository.
+Render: Root Directory = backend.   Vercel: Root Directory = frontend.

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-paper text-ink font-sans antialiased; }
+:focus-visible { outline: 3px solid #2748D9; outline-offset: 2px; }
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center rounded-lg px-4 py-2.5 font-bold transition-colors disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply bg-brand text-white hover:bg-blue-800; }
+  .btn-ghost { @apply border border-ink/20 bg-white hover:bg-ink/5; }
+  .btn-danger { @apply border border-red-300 text-red-700 bg-white hover:bg-red-50; }
+  .input { @apply w-full rounded-lg border border-ink/20 bg-white px-3 py-2.5; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
